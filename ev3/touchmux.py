@@ -46,8 +46,6 @@ class TouchMux(Msensor):
             touch = TouchMux.T2 | TouchMux.T3
         elif mv > TouchMux.L123 and mv < TouchMux.H123:
             touch = TouchMux.T1 | TouchMux.T2 | TouchMux.T3
-        #else:
-            #assert False, "bad reading from touchmux sensor: %s" % mv
 
         logging.debug("touchmux mv reading %d => %d", mv,touch)
         return touch
